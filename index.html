@@ -1,0 +1,70 @@
+<html>
+    <header>
+        <meta charset="UTF-8"/>
+        <title>Calendar</title>
+        <link rel="stylesheet" href="style.css">
+    </header>
+    <body>
+        <div id="main_container">
+            <div id="top_container">
+                <div id="header">
+                    <button id="previous_month">&#x25C2</button>
+                    <div id="month_and_year">
+                        <div id="month">
+                            January
+                        </div>
+                        <div id="year">2024</div>
+                        <div id="target_year">
+                            <input type="number">
+                        </div>
+                    </div>
+                    <button id="next_month">&#x25B8</button>
+                </div>
+                <div id="days_and_dates">
+                    <div id="days">
+                        <ul style="list-style-type: none;">
+                            <li class="active_day">Sun</li>
+                            <li class="inactive_day">Mon</li>
+                            <li class="inactive_day">Tue</li>
+                            <li class="inactive_day">Wed</li>
+                            <li class="inactive_day">Thu</li>
+                            <li class="inactive_day">Fri</li>
+                            <li class="inactive_day">Sat</li>
+                        </ul>
+                    </div>
+                    <div id="dates">
+                        <ul style="list-style-type: none;"></ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="bottom_container">
+                <div id="buttons">
+                    <button id="create">Create Event</button><hr>
+                    <button id="delete">Delete Event</button><hr>
+                    <button id="mark">Mark as Completed</button>
+                </div>
+                <div id="event_info">
+                    <form onkeypress="return event.keyCode != 13;" autocomplete="off">
+                        <input type="text" id="event_name" placeholder="Event Name">
+                        <textarea name="details" id="event_details" rows="5" cols="5" autocomplete="off" placeholder="Event Details"></textarea>
+                        <div id="bottom_div">
+                            <div id="event_time">
+                                <span>&#x1F552;</span>
+                                <input type="number" id="hours" placeholder="Hours">
+                                <span>:</span>
+                                <input type="number" id="minutes" placeholder="Minutes">
+                            </div>
+                            <div>
+                                <button id="add">Add Event</button>
+                                <button id="cancel">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="event_container"></div>
+    </body>
+    <script src="index.js"></script>
+</html>

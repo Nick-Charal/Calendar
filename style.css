@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: wheat;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main_container, #event_container {
+    background-color: #36454F;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+#event_container .event {
+    display: none;
+    flex-direction: column;
+}
+
+#event_container div{
+    margin: 5px 0 5px 0;
+    padding: 5px;
+}
+
+#event_container p {
+    width: 50vw;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#event_container p:hover {
+    overflow: visible;
+    height: auto;
+    word-break: break-all;
+    white-space: wrap;
+}
+
+#event_container div:hover, .marked_event{
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+#top_container {
+    display: flex;
+    flex-direction: column;
+}
+
+#top_container #header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#top_container #month_and_year {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#top_container #header button {
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+}
+
+#top_container #header button:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+#top_container #month, #year {
+    padding: 5px;
+}
+
+#top_container #year:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#top_container #target_year {
+    display: none;
+}
+
+#top_container #target_year input {
+    width: 50px;
+    text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#top_container #days_and_dates ul {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+}
+
+#top_container #days_and_dates li {
+    height: 50px; 
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#top_container #dates li:hover, .marked_date {
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.previous_month, .next_month {
+    opacity: 25%;
+}
+
+.active_date {
+    border-radius: 5px;
+    background-color: lightblue;
+}
+
+#bottom_container {
+    display: flex;
+    flex-direction: column;
+}
+
+#bottom_container #buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 10px 0;
+}
+
+#bottom_container #buttons button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 1.05rem;
+}
+
+#bottom_container #buttons hr {
+    margin: 0 5px 0 5px;
+}
+
+#bottom_container button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    transform: scale(1.05);
+}
+
+#bottom_container #event_info {
+    display: none;
+    flex-direction: column;
+}
+
+#bottom_container #event_info #event_name, #event_details {
+    width: 100%;
+}
+
+#bottom_container #event_name, textarea, input {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+    margin: 5px 0 5px 0;
+    padding: 5px;
+}
+
+#bottom_container #bottom_div button {
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 5px;
+}
+
+#bottom_container #bottom_div input:hover {
+    cursor: pointer;
+}
+
+#bottom_container input::placeholder, textarea::placeholder {
+    text-align: center;
+}
+
+#bottom_container #bottom_div input {
+    width: 60px;
+    text-align: center;
+}
+
+#bottom_container #bottom_div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
